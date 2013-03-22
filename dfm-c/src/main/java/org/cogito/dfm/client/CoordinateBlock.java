@@ -124,41 +124,46 @@ public class CoordinateBlock {
 	public void nudgeXUp ()
 	{
 		mcUpper.setX (mcUpper.getX () + 1);
+		mcLower.setX (mcUpper.getX () + 1);
 	}
 	public void nudgeXDown ()
 	{
 		mcUpper.setX (mcUpper.getX () - 1);
+		mcLower.setX (mcUpper.getX () - 1);
 	}
 	public void nudgeYUp ()
 	{
 		mcUpper.setY (mcUpper.getY () + 1);
+		mcLower.setY (mcUpper.getY () + 1);
 	}
 	public void nudgeYDown ()
 	{
 		mcUpper.setY (mcUpper.getY () - 1);
+		mcLower.setY (mcUpper.getY () - 1);
 	}
-		public void nudgeZUp ()
+	public void nudgeZUp ()
 	{
 		mcUpper.setZ (mcUpper.getZ () + 1);
+		mcLower.setZ (mcUpper.getZ () + 1);
 	}
 	public void nudgeZDown ()
 	{
 		mcUpper.setZ (mcUpper.getZ () - 1);
-	}
-		public void nudgeXUp ()
-	{
-		mcUpper.setX (mcUpper.getX () + 1);
+		mcLower.setZ (mcUpper.getZ () - 1);
 	}
 	public void shiftX (int shiftVal)
 	{
 		mcUpper.setX (mcUpper.getX () + shiftVal);
+		mcLower.setX (mcUpper.getX () + shiftVal);
 	}
 	public void shiftY (int shiftVal)
 	{
 		mcUpper.setY (mcUpper.getY () + shiftVal);
+		mcLower.setY (mcUpper.getY () + shiftVal);
 	}
 	public void shiftZ (int shiftVal)
 	{
 		mcUpper.setZ (mcUpper.getZ () + shiftVal);
+		mcLower.setZ (mcUpper.getZ () + shiftVal);
 	}
 }
