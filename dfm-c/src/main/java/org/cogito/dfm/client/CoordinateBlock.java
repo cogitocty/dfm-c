@@ -5,8 +5,8 @@ public class CoordinateBlock {
 	{
 		boolean bRetVal;
 		if (mcLower.getX () > mcUpper.getX () ||
-			mcLower.getY () > mcUpper.getY () ||
-			mcLower.getX () > mcUpper.getX ())
+				mcLower.getY () > mcUpper.getY () ||
+				mcLower.getX () > mcUpper.getX ())
 		{
 			bRetVal = true;
 		}
@@ -24,19 +24,19 @@ public class CoordinateBlock {
 		mcUpper = cUpper;
 	}
 	public CoordinateBlock (int LowerX, int LowerY, int LowerZ, 
-							int UpperX, int UpperY, int UpperZ)
+													int UpperX, int UpperY, int UpperZ)
 	{
 		mcLower = new Coordinate (LowerX, LowerY, LowerZ);
 		mcUpper = new Coordinate (UpperX, UpperY, UpperZ);
 	}
 	public CoordinateBlock (Coordinate cLower,
-							int UpperX, int UpperY, int UpperZ)
+													int UpperX, int UpperY, int UpperZ)
 	{
 		mcLower = cLower;
 		mcUpper = new Coordinate (UpperX, UpperY, UpperZ);
 	}
 	public CoordinateBlock (int LowerX, int LowerY, int LowerZ,
-							Coordinate cUpper)
+													Coordinate cUpper)
 	{
 		mcLower = new Coordinate (LowerX, LowerY, LowerZ);
 		mcUpper = cUpper;
@@ -120,5 +120,45 @@ public class CoordinateBlock {
 	public long getTotalArea ()
 	{
 		return (long) (getXRange () * getYRange () * getZRange ());
+	}
+	public void nudgeXUp ()
+	{
+		mcUpper.setX (mcUpper.getX () + 1);
+	}
+	public void nudgeXDown ()
+	{
+		mcUpper.setX (mcUpper.getX () - 1);
+	}
+	public void nudgeYUp ()
+	{
+		mcUpper.setY (mcUpper.getY () + 1);
+	}
+	public void nudgeYDown ()
+	{
+		mcUpper.setY (mcUpper.getY () - 1);
+	}
+		public void nudgeZUp ()
+	{
+		mcUpper.setZ (mcUpper.getZ () + 1);
+	}
+	public void nudgeZDown ()
+	{
+		mcUpper.setZ (mcUpper.getZ () - 1);
+	}
+		public void nudgeXUp ()
+	{
+		mcUpper.setX (mcUpper.getX () + 1);
+	}
+	public void shiftX (int shiftVal)
+	{
+		mcUpper.setX (mcUpper.getX () + shiftVal);
+	}
+	public void shiftY (int shiftVal)
+	{
+		mcUpper.setY (mcUpper.getY () + shiftVal);
+	}
+	public void shiftZ (int shiftVal)
+	{
+		mcUpper.setZ (mcUpper.getZ () + shiftVal);
 	}
 }
